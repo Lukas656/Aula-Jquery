@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.js"
+        integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+
+    <style>
+        #bloco {
+            width: 200px;
+            height: 200px;
+            background-color: black;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="box2">
+        <h1>Exemplo 1</h1>
+        <div id="bloco"></div>
+        <p id="texto"></p>
+    </div>
+</body>
+
+<script>
+
+   // Eventos em um unico componente
+    $("#bloco").on({
+        click:()=>{$("#texto").text("Lucas voce CLICOU no quadrado!!")},
+        mouseenter:()=>{$("#texto").text("mouse ENTROU no quadrado !!!")},
+        mouseleave:()=>{$("#texto").text("mouse SAIU no quadrado !!!")},
+        dblclick:()=>{$("#texto").text("mouse click DUPLO no quadrado !!!")},
+    })
+    
+    
+
+</script>
+
+</html>
