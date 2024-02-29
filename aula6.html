@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.js"
+        integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+
+    <style>
+        .box{
+            display: flex;
+            justify-content: space-around;
+        }
+
+        #bloco {
+            width: 200px;
+            height: 200px;
+            background-color: black;
+        }
+
+        #bloco2 {
+            width: 200px;
+            height: 200px;
+            background-color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <h3 id="texto"></h3>
+    <div class="box">
+        <div class="box1">
+            <h1>Exemplo 1</h1>
+            <div id="bloco"></div>
+        </div>
+        <div class="box2">
+            <h1>Exemplo 2</h1>
+            <div id="bloco2"></div>
+        </div>
+    </div>
+</body>
+
+<script>
+
+    // Eventos em um unico componente
+    $("#bloco").on({
+        click: () => { $("#texto").text("Lucas voce CLICOU no quadrado!!") },
+        mouseenter: () => { $("#texto").text("mouse ENTROU no quadrado !!!") },
+        mouseleave: () => { $("#texto").text("mouse SAIU no quadrado !!!") },
+        dblclick: () => { $("#texto").text("mouse click DUPLO no quadrado !!!") },
+    })
+    // chamar Eventos sem prescisar disparal-os manualmente 
+    $("#bloco2").click(() => {
+        $('#bloco').trigger('click')
+    })
+
+</script>
+
+</html>
