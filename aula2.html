@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script src="https://code.jquery.com/jquery-3.7.1.js"
-    integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+    integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script> 
 </head>
 
 <body>
@@ -19,12 +19,27 @@
         <label>Resultado</label>
         <input type="text" id="res" value="0"/>
         <br/><br/>
-        <button id="btn-somarJs">Somar JS</button>
-        <button id="btn-somarJq">Somar JQ</button>
+        <button id="btn_somarJs">Somar JS</button>
+        <button id="btn_somarJq">Somar JQ</button>
     </div>
 </body>
 <script>
+
     // Exemplo JS 
-    let btnSomarJs = Document.getEl
+     let btn_somarJs = document.getElementById("btn_somarJs").addEventListener("click", ()=>{
+         let v1 = document.getElementById("v1").value;
+         let v2 = document.getElementById("v2").value;
+         let res = document.getElementById("res").value = parseInt(v1) + parseInt(v2)
+     })
+
+    // Exemplo Jquery
+    $("#btn_somarJq").click(()=>{
+        let v1 = parseInt($("#v1").val())
+        let v2 = parseInt($("#v2").val())
+        let soma = v1 + v2
+
+        $("#res").val(soma)
+    })
+
 </script>
 </html>
