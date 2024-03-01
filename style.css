@@ -1,0 +1,22 @@
+nav{
+    margin-bottom: 150px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.box {
+    display: flex;
+    justify-content: space-around;
+}
+
+#bloco {
+    width: 200px;
+    height: 200px;
+    background-color: black;
+}
+
+#bloco2 {
+    width: 200px;
+    height: 200px;
+    background-color: red;
+}
