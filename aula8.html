@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 8</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.js"
+        integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+    <p id="texto1">Lucas</p>
+    
+    <div id="texto2">Curso Jquery</div>
+    
+    <p id="resultado"></p>
+
+    <script>
+        // Obter o nome do elemento e ou ID pelo event.target 
+        $("#texto1").click((event)=>{
+            $("#resultado").text("Objeto que foi clicado: " + event.target.nodeName)
+        })
+        $("#texto2").click((event)=>{
+            $("#resultado").text("Objeto que foi clicado: " + event.target.nodeName)
+        })
+
+        $(document).click((event)=>{
+            $("#resultado").text("Objeto Clicado: " + event.target.tagName + ", com o ID: "+ event.target.id)
+           if (event.target.id == "resultado") {
+                alert('Resultado Clicado')
+           }
+            
+        })
+    </script>
+</body>
+
+
+</html>
