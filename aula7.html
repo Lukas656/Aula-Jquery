@@ -17,15 +17,15 @@
     let pmx = 0
     let pmy = 0
     // Obter a posição exata do mouse dentro do documento ou elemento
-    $(document).mousemove((event)=>{
+    $(document).mousemove((event) => {
         pmx = event.pageX
         pmy = event.pageY
         if (pmx > 500) {
             console.log("Pos X > 500px");
         } else {
-            
+
         }
-        $("#texto").text("Mouse X: " + pmx + "px"+ ", Mouse Y: " + pmy + "px")
+        $("#texto").text("Mouse X: " + pmx + "px" + ", Mouse Y: " + pmy + "px")
     })
 </script>
 

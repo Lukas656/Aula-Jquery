@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 9</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.js"
+        integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+    <div>
+        <ul>
+            <li>
+                <h3>Lucas Santos</h3>
+                <span>Curso Jquery</span>
+                <p>Seletores Parent</p>
+            </li>
+        </ul>
+    </div>
+
+    <script>
+        // Seletores Parent
+
+        // Seletores Pai diretamente
+        $("p").parent().css({ 'border': '1px solid red' })
+        $("li").parent().css({ 'border': '1px solid blue' })
+        $("ul").parent().css({ 'border': '1px solid green' })
+        $("div").parent().css({ 'border': '1px solid yellow' })
+        $("body").parent().css({ 'border': '1px solid purple' })
+
+        // Seletores Pai gerais
+        $("p").parents().css({ 'border': '1px solid red' })
+
+        // Seleciona todos os Elementos Pais até um determinado elemento , aqui limitamos 
+        $("p").parentsUntil('div').css({ 'border': '1px solid red' })
+
+    </script>
+</body>
+
+
+</html>
