@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aula 9</title>
+    <title>Aula 10</title>
     <script src="https://code.jquery.com/jquery-3.7.1.js"
         integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="style.css">
@@ -28,21 +28,18 @@
         </nav>
     </header>
 
-    <p id="texto1">Lucas</p>
-
-    <p id="resultado"></p>
+    <div class="texto10">
+        <p id="texto10">Lucas
+            <br/><br/><br/>
+            <span >Curso de JQuery</span>           
+        </p>
+</div>
 
     <script>
-        // Descobrindo quem disparou o evento e qual evento foi disparado
-        $(document).on({
-            click: () => { $("#resultado").text(event.type + ": " + event.which) },
-            keydown: () => {
-                $("#resultado").text(event.type + ": " + event.which)
-                if (event.which == 13) {
-                    alert('Enter pressionado')
-                }
-            }
-        })
+// Aprenda como parar a propagação do evento?
+        $("div").click(()=>{alert("Evento Disparado no Div")})
+        $("p").click((event)=>{event.stopPropagation() ;alert("Evento Disparado no P")})
+        $("span").click((event)=>{event.stopPropagation() ;alert("Evento Disparado no Span")})
     </script>
 </body>
 
