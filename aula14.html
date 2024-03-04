@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 14</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.js"
+        integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <p>Cursos</p>
+    <h3>Cursos Jquery</h3>
+    <p>Curso de Canvas</p>
+    <h3>Cursos React</h3>
+    <p>Curso de Youtube</p>
+    <h3>Cursos JS</h3>
+    <p>Sites.com</p>
+    <h3>Cursos SCSS</h3>
+    <p>Filtrando elementos</p>
+    <h3>Filtrando elementos</h3>
+
+    <script>
+        // Métodos para filtragem de elementos, first, eq e last
+        // 1º elemento
+        $("p").first().css({'color': 'red', 'background-color': "yellow"})
+        // ultimo elemento
+        $("p").last().css({'color': 'blue', 'background-color': "Green "})
+        // intermediarios o eq conta os elementos em ordem numerica de aparecimento 0,1,2.... 
+        $("p").eq(2).css({'color': 'Green ', 'background-color': "Purple  "})
+
+   </script>
+</body>
+
+
+</html>
