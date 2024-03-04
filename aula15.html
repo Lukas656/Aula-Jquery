@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 15</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.js"
+        integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<style>
+    p{
+        background-color: yellow;
+    }
+    h3{
+        background-color: green;
+    }
+    .borda{
+        border: 3px solid red;
+    }
+</style>
+<body>
+
+    <p class="borda">Cursos</p>
+    <h3>Cursos Jquery</h3>
+    <p >Curso de Canvas</p>
+    <h3>Cursos React</h3>
+    <p>Curso de Youtube</p>
+    <h3>Cursos JS</h3>
+    <p>Sites.com</p>
+    <h3>Cursos SCSS</h3>
+    <p class="borda">Filtrando elementos</p>
+    <h3>Filtrando elementos</h3>
+
+    <script>
+        // métodos para filtragem de elementos #P2, filter, not 
+        
+    // filtrando todos os elementos p que tem a class .borda
+      $('p').filter('.borda').css({'color': 'red'})
+    // filtrando todos os elementos p que não tem a class .borda
+      $('p').not('.borda').css({'color': 'blue'})
+
+
+    </script>
+</body>
+
+
+</html>
