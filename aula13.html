@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 13</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.js"
+        integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    
+
+    <div>
+        <span>
+            <h3>
+                Lucas Santos
+            </h3>
+            <p>
+               Curso Jquery
+            </p>
+            <h2>
+                Seletores Irmãos
+            </h2>
+            <p>
+                Siblings
+            </p>
+        </span>        
+    </div>
+
+    <script>
+        // métodos siblings, next e prev 
+        
+        // pegar os irmãos do mesmo nivel do  h3 
+        $("h3").siblings().css({'border': '1px solid red'})
+        
+        // pegar os irmãos em especificos
+        $("h3").siblings('p').css({'border': '1px solid blue'})
+        
+        // Apontar para o irmão direto ao lado direito
+        $("h3").next().css({'border': '3px solid grey'})
+
+        // Apontar para todos os irmãos ao lado esquerdo
+        $("h2").nextAll().css({'border': '3px solid green'})
+
+        // Apontar para o irmão direto ao lado esquerdo
+        $("h2").prev().css({'border': '3px solid green'})
+        
+        // Apontar para todos os irmãos ao lado esquerdo
+        $("h2").prevAll().css({'border': '3px solid green'})
+        
+        // Apontar para todos os irmãos até o h3 
+        $("h2").prevUntil('h3').css({'border': '3px solid black'})
+   </script>
+</body>
+
+
+</html>
