@@ -29,22 +29,47 @@
         </nav>
     </header>
 
-    <p id="texto1">Lucas</p>
-
-    <p id="resultado"></p>
+    <div>
+        <ul>
+            <li>
+                Lucas Santos
+            </li>
+            <li>
+               Curso Jquery
+            </li>
+            <li>
+                Seletores Parent
+            </li>
+        </ul>
+        
+        <ul>
+            <li>
+                Lucas Santos
+            </li>
+            <li>
+               Curso Jquery
+            </li>
+            <li>
+                Seletores Parent
+            </li>
+        </ul>
+        
+    </div>
 
     <script>
-        // Descobrindo quem disparou o evento e qual evento foi disparado
-        $(document).on({
-            click: () => { $("#resultado").text(event.type + ": " + event.which) },
-            keydown: () => {
-                $("#resultado").text(event.type + ": " + event.which)
-                if (event.which == 13) {
-                    alert('Enter pressionado')
-                }
-            }
-        })
-    </script>
+        // Seletores children e find
+    // Seletores children
+        $("ul").children().css({ 'border': '1px solid red' });
+   // Seletores find
+   // todos os ul
+   $('div').find('ul').css({ 'border': '1px solid blue' });
+   // somento o 1º ul
+   $('div').find('ul:first').css({ 'border': '1px solid blue' });
+   // somento o ultimo ul
+   $('div').find('ul:last').css({ 'border': '4px solid green' });
+   // todos os elementos a partir da div
+   $('html').find('*').css({ 'border': '2px solid black' });
+   </script>
 </body>
 
 
